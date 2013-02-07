@@ -1,0 +1,9 @@
+[submodule "orion.client"]
+	path = orion.client
+	url = git://github.com/eclipse/orion.client.git
+[submodule "ace"]
+	path = ace
+	url = git://github.com/ajaxorg/ace.git
+[submodule "extensions/orion/esprimaContentAssist"]
+	path = extensions/orion/esprimaContentAssist
+	url = git://github.com/aeisenberg/esprimaContentAssist.git
