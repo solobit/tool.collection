@@ -1,0 +1,501 @@
+ 4519  vim config.js
+ 4520  la
+ 4521  cd examples
+ 4522  la
+ 4523  vim example-graphite-vhost.conf r
+ 4524  vim example-graphite-vhost.conf
+ 4525  sudo vim /etc/nginx/nginx.conf
+ 4526  popd
+ 4527  cd /opt/graphite
+ 4528  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4529  vim webapp/graphite/settings.py
+ 4530  cd webapp/graphite
+ 4531  la
+ 4532  ls ../
+ 4533  ls ../../
+ 4534  ls ../../storage
+ 4535  pwd ../../storage/graphite.db
+ 4536  ls ../../storage/graphite.db
+ 4537  cd ../../storage/graphite.db
+ 4538  cd ../../storage/
+ 4539  pwd
+ 4540  popd
+ 4541  vim local_settings.py
+ 4542  ;a
+ 4543  la
+ 4544  cat local_settings.py.example
+ 4545  cat local_settings.py.example > local_settings.py
+ 4546  vim local_settings.py
+ 4547  sudo vim local_settings.py
+ 4548  l
+ 4549  python manage.py syncdb
+ 4550  python2 manage.py syncdb
+ 4551  ..
+ 4552  l
+ 4553  ls content
+ 4554  cd graphite
+ 4555  la
+ 4556  ..
+ 4557  cd storage
+ 4558  la
+ 4559  sqlite3 graphite.db
+ 4560  la
+ 4561  ..
+ 4562  cd webapp/graphite
+ 4563  vim settings.py
+ 4564  ...
+ 4565  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4566  vim webapp/graphite/settings.py
+ 4567  sudo vim webapp/graphite/settings.py
+ 4568  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4569  sudo vim /etc/varnish/default.vcl
+ 4570  sudo varnishd -f /etc/varnish/default.vcl
+ 4571  htop
+ 4572  la
+ 4573  ls
+ 4574  ls conf
+ 4575  ls bin
+ 4576  ls examples
+ 4577  la
+ 4578  cd webapp
+ 4579  la
+ 4580  cd graphite
+ 4581  la
+ 4582  ..
+ 4583  vim conf/carbon.conf
+ 4584  ./bin/carbon-cache.py start
+ 4585  htop
+ 4586  yarem graphite-web
+ 4587  yareps carbon
+ 4588  yareps twistd
+ 4589  ./bin/carbon-cache.py start
+ 4590  cd examples
+ 4591  la
+ 4592  python example-client.py
+ 4593  python2 example-client.py
+ 4594  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4595  ..
+ 4596  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4597  htop
+ 4598  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4599  python examples/example-client.py
+ 4600  vim examples/example-client.py
+ 4601  yareps collectd
+ 4602  yainsd aur/collectd-graphite-git
+ 4603  yareps graphite
+ 4604  yainsd aur/statsd-git
+ 4605  rehash
+ 4606  statsd
+ 4607  cd /srv/www/demos
+ 4608  la
+ 4609  cd node
+ 4610  la
+ 4611  cd statsd
+ 4612  la
+ 4613  mv config.js ../
+ 4614  ..
+ 4615  cat config.js
+ 4616  statsd /srv/www/demos/node
+ 4617  statsd /srv/www/demos/node/config.js
+ 4618  statsd/bin/statsd /srv/www/demos/node/config.js
+ 4619  vim config.js
+ 4620  statsd/bin/statsd /srv/www/demos/node/config.js
+ 4621  vim config.js
+ 4622  la
+ 4623  git clone git://github.com/jondot/graphene.git
+ 4624  cd graphene
+ 4625  la
+ 4626  gem i serve
+ 4627  serve .
+ 4628  bundle
+ 4629  la
+ 4630  la app
+ 4631  la build
+ 4632  ./devstart.sh
+ 4633  la
+ 4634  ls tools
+ 4635  cat README.md
+ 4636  ..
+ 4637  git clone git://github.com/fetep/pencil.git
+ 4638  cd pencil
+ 4639  la
+ 4640  gem i pencil
+ 4641  sudo chown -R susy:wheel ~/.rvm
+ 4642  gem i pencil
+ 4643  pencil
+ 4644  ls examples
+ 4645  pencil 
+ 4646  pencil examples
+ 4647  cd examples
+ 4648  pencil
+ 4649  vim dashboards.yml
+ 4650  vim graphs.yml
+ 4651  la
+ 4652  vim pencil.yml
+ 4653  PYTHONPATH=`pwd`/whisper ./bin/run-graphite-devel-server.py --libs=`pwd`/webapp/ /opt/graphite/
+ 4654  pencil
+ 4655  ..
+ 4656  git clone git://github.com/obfuscurity/tasseo.git
+ 4657  cd tasseo
+ 4658  bundle
+ 4659  ..
+ 4660  mkdir shinken
+ 4661  cd shinken
+ 4662  curl -L http://install.shinken-monitoring.org | /bin/bash
+ 4663  yareps lsb_release
+ 4664  yareps lsb
+ 4665  yinsd lsb-release
+ 4666  yainsd lsb-release
+ 4667  curl -L http://install.shinken-monitoring.org | /bin/bash
+ 4668  yareps shinken
+ 4669  yainsd shinken
+ 4670  yainsd nagios-plugins python-pysqlite python-simplejson nagcon --needed
+ 4671  yainsd nagios-plugins python-simplejson nagcon --needed
+ 4672  yainsd nagios-plugins python-simplejson
+ 4673  curl -L http://install.shinken-monitoring.org | /bin/bash
+ 4674  sudo curl -L http://install.shinken-monitoring.org | /bin/bash
+ 4675  curl -L http://install.shinken-monitoring.org | sudo /bin/bash
+ 4676  curl -L http://install.shinken-monitoring.org
+ 4677  curl -L http://install.shinken-monitoring.org > shinken.sh
+ 4678  vim shinken.sh
+ 4679  sudo bash shinken.sh
+ 4680  wget http://shinken-monitoring.org/pub/shinken-1.2.2.tar.gz
+ 4681  tar xzf shinken-1.2.2.tar.gz
+ 4682  cd shinken-1.2.2
+ 4683  la
+ 4684  ./install
+ 4685  sudo ./install
+ 4686  sudo ./install -i
+ 4687  l
+ 4688  la
+ 4689  cat README.rst
+ 4690  yareps shinken
+ 4691  ..
+ 4692  rm -rf shinken
+ 4693  ls /opt
+ 4694  whereis shinken
+ 4695  rehash
+ 4696  shinken-admin
+ 4697  sudo shinken-admin
+ 4698  shinken-arbiter
+ 4699  shinken-arbiter -c /etc/shinken/services/linux_local.cfg
+ 4700  shinken-arbiter -c /etc/shinken/skonf.cfg
+ 4701  shinken-arbiter -c /etc/shinken/nagios.cfg
+ 4702  shinken-arbiter -c /etc/shinken/shinken-specific.cfg
+ 4703  sudo shinken-arbiter -c /etc/shinken/shinken-specific.cfg
+ 4704  htop
+ 4705  shinken-discovery
+ 4706  git clone git://github.com/naparuba/shinken.git
+ 4707  cd shinken
+ 4708  ./install -p nagios-plugins && ./install -p check_mem && ./install -p manubulon && ./install -a pnp4nagios
+ 4709  sudo ./install -p nagios-plugins && sudo ./install -p check_mem && sudo ./install -p manubulon && sudo ./install -a pnp4nagios
+ 4710  vim install
+ 4711  sudo ./install -p nagios-plugins && sudo ./install -p check_mem && sudo ./install -p manubulon && sudo ./install -a pnp4nagios
+ 4712  vim install
+ 4713  sudo ./install -p nagios-plugins && sudo ./install -p check_mem && sudo ./install -p manubulon && sudo ./install -a pnp4nagios
+ 4714  vim install
+ 4715  TARGET=/usr/lib sudo ./install -p nagios-plugins
+ 4716  ls
+ 4717  vim setup.cfg
+ 4718  ls install.d
+ 4719  vim install.d/shinken.conf
+ 4720  sudo ./install -p nagios-plugins && sudo ./install -p check_mem && sudo ./install -p manubulon && sudo ./install -a pnp4nagios
+ 4721  cd install.d
+ 4722  la
+ 4723  ./shinken_all.sh
+ 4724  ..
+ 4725  git clone git://github.com/paperlesspost/graphiti.git
+ 4726  cd graphiti
+ 4727  la
+ 4728  bundle
+ 4729  yareps diamons
+ 4730  yareps diamond
+ 4731  ..
+ 4732  git clone git://github.com/ripienaar/gdash.git
+ 4733  cd gdash
+ 4734  la
+ 4735  bundle
+ 4736  la
+ 4737  cat Gemfile
+ 4738  cat Rakefile
+ 4739  rake
+ 4740  cp config/gdash.yaml-sample config/gdash.yaml
+ 4741  gem i sinatra
+ 4742  rehash
+ 4743  ;a
+ 4744  la
+ 4745  ls public
+ 4746  ls tools
+ 4747  ruby tools/dashboards-validation.rb
+ 4748  ls sample
+ 4749  ls views
+ 4750  cat README.md
+ 4751  vim config/gdash.yaml
+ 4752  la
+ 4753  yareps passenger
+ 4754  yainsd aur/passenger-enterprise-nginx
+ 4755  yainsd aur/passenger-nginx
+ 4756  yainsdpassenger-nginx
+ 4757  yainsd passenger-nginx
+ 4758  yainsd nginx_passenger
+ 4759  ..
+ 4760  tt
+ 4761  git clone git://github.com/sickill/archlinux-nginx-passenger.git
+ 4762  cd archlinux-nginx-passenger
+ 4763  la
+ 4764  cd nginx-passenger
+ 4765  la
+ 4766  makepkg
+ 4767  vim PKGBUILD
+ 4768  la
+ 4769  ls /
+ 4770  cd src
+ 4771  vim nginx-1.0.4/configure
+ 4772  cd src
+ 4773  la
+ 4774  cd nginx-1.0.4
+ 4775  la
+ 4776  grep -irn 'etx' .
+ 4777  grep -irn 'ext' .
+ 4778  grep -irn 'ext/' .
+ 4779  grep -irn 'etx/' .
+ 4780  grep -irn 'ext/' ..
+ 4781  grep -irn 'etx/' ..
+ 4782  ..
+ 4783  la
+ 4784  cd nginx-1.0.4
+ 4785  ./configure
+ 4786  make
+ 4787  sudo make install
+ 4788  ls /etc/nginx/conf.d
+ 4789  cat /etc/nginx/nginx.conf
+ 4790  vim /etc/nginx/nginx.conf
+ 4791  sudo vim /etc/nginx/nginx.conf
+ 4792  la
+ 4793  popd
+ 4794  ..
+ 4795  la
+ 4796  cd tasseo
+ 4797  la
+ 4798  bundle
+ 4799  cat README.md
+ 4800  less README.md
+ 4801  foreman start
+ 4802  gem i foreman
+ 4803  foreman start
+ 4804  la
+ 4805  vim dashboards/example.js
+ 4806  foreman start
+ 4807  vim dashboards/sample2.js
+ 4808  foreman start
+ 4809  ls
+ 4810  ..
+ 4811  git clone git://github.com/obfuscurity/descartes.git
+ 4812  cd descartes
+ 4813  la
+ 4814  bundle
+ 4815  createdb descartes
+ 4816  postgres -h
+ 4817  postgres
+ 4818  postgres start
+ 4819  postgres --help
+ 4820  sudo -i
+ 4821  whereis postgres
+ 4822  echo $PGDATA
+ 4823  mkdir /usr/local/share/pgsql
+ 4824  postgres /usr/local/share/pgsql/data
+ 4825  postgres -D /usr/local/share/pgsql/data
+ 4826  find / -name postgresql.conf
+ 4827  sudo find /etc -name postgresql.conf
+ 4828  sudo find /usr -name postgresql.conf
+ 4829  ls /opt
+ 4830  sudo find /usr -name postgresql.conf
+ 4831  cp /usr/lib/tmpfiles.d/postgresql.conf /usr/local/share/pgsql
+ 4832  postgres -D /usr/local/share/pgsql/data
+ 4833  mkdir /usr/local/share/pgsql/data
+ 4834  mv /usr/local/share/pgsql/postgresql.conf /usr/local/share/pgsql/data
+ 4835  postgres -D /usr/local/share/pgsql/data
+ 4836  vim /usr/local/share/pgsql/data/postgresql.conf
+ 4837  rm -rf /usr/local/share/pgsql
+ 4838  sudo updatedb
+ 4839  pg_ctl start
+ 4840  pg_ctl start -D
+ 4841  pg_ctl -D
+ 4842  pg_ctl -D /var/lib/postgres/data/
+ 4843  pg_ctl -D /var/lib/postgres/data/ start
+ 4844  sudo pg_ctl -D /var/lib/postgres/data/ start
+ 4845  la /var/lib/postgres/data/
+ 4846  sudo ls -lsa /var/lib/postgres/data/
+ 4847  sudo su postgres pg_ctl -D /var/lib/postgres/data/ start
+ 4848  sudo postgres -c "pg_ctl -D /var/lib/postgres/data/ start"
+ 4849  postgres -c "pg_ctl -D /var/lib/postgres/data/ start"
+ 4850  sudo su postgres -c "pg_ctl -D /var/lib/postgres/data/ start"
+ 4851  la
+ 4852  createdb descartes
+ 4853  cat README.md
+ 4854  bundle exec rake db:migrate:up
+ 4855  foreman start
+ 4856  htop
+ 4857  sudo su postgres
+ 4858  sudo vim /etc/environment
+ 4859  sudo su postgres
+ 4860  sudo htop
+ 4861  sudo su postgres
+ 4862  pg_ctl --help
+ 4863  sudo htop
+ 4864  foreman start
+ 4865  vim config.ru
+ 4866  htop
+ 4867  redis-server
+ 4868  htop
+ 4869  foreman start
+ 4870  redis-server stop
+ 4871  redis-server -h
+ 4872  sudo htop
+ 4873  foreman start
+ 4874  sudo foreman start
+ 4875  foreman start
+ 4876  vim config.ru
+ 4877  vim lib/descartes/config.rb
+ 4878  export SESSION_SECRET="boooohaaaahhh" foreman start
+ 4879  SESSION_SECRET="boooohaaaahhh" foreman start
+ 4880  createdb descartes
+ 4881  bundle exec rake db:migrate:up
+ 4882  foreman start
+ 4883  vim lib/descartes/
+ 4884  vim lib/descartes/config.rb
+ 4885  ..
+ 4886  git clone git://github.com/fzaninotto/uptime.git
+ 4887  cd uptime
+ 4888  la
+ 4889  npm i
+ 4890  npm i -g bson
+ 4891  la
+ 4892  node app.js
+ 4893  mongod start
+ 4894  sudo mongod -f /etc/mongodb.conf
+ 4895  sudo su mongodb -c "mongod -f /etc/mongodb.conf"
+ 4896  sudo su mongodb -c "nohup mongod -f /etc/mongodb.conf & disown"
+ 4897  htop
+ 4898  node app.js
+ 4899  sudo vim /etc/nginx/nginx.conf
+ 4900  echo $TERM
+ 4901  vim ~/.zshrc
+ 4902  source ~/.zshrc
+ 4903  vim ~/.zshrc
+ 4904  popd
+ 4905  la
+ 4906  git clone git://github.com/obfuscurity/backstop.git
+ 4907  cd backstop
+ 4908  bundle
+ 4909  ls
+ 4910  vim config/newrelic.yml
+ 4911  ls
+ 4912  vim lib/backstop/config.rb
+ 4913  vim lib/backstop/web.rb
+ 4914  vim lib/backstop/collectd/plugins/interface.rb
+ 4915  yareps backstop
+ 4916  yareps monitor
+ 4917  ls
+ 4918  yareps collectd
+ 4919  collectd
+ 4920  sudo collectd
+ 4921  yareps rrdtool
+ 4922  yainsd rrdtool
+ 4923  yainsd aur/nmon2rrd
+ 4924  yareps rrdtool
+ 4925  sudo collectd
+ 4926  htop
+ 4927  sudo collectd stop
+ 4928  sudo htop
+ 4929  collectd
+ 4930  sudo collectd
+ 4931  htop
+ 4932  la
+ 4933  tmux attach-session
+ 4934  tmux
+ 4935* htop
+ 4936  tmux list-session
+ 4937  w
+ 4938  htop
+ 4939  sudo htop
+ 4940  cd /srv/www
+ 4941  la
+ 4942  mv node metrics
+ 4943  la
+ 4944  mv hummingbird metrics
+ 4945  ls analytics
+ 4946  ls analytics/piwik metrics
+ 4947  mv analytics/piwik metrics
+ 4948  rmdir analytics
+ 4949  ls
+ 4950  ls /srv/www/metrics
+ 4951  ls -1 /srv/www/metrics
+ 4952  ls -1 /srv/www/demos/node/* metrics
+ 4953  mv /srv/www/demos/node/* metrics
+ 4954  ls /srv/www/demos/node/
+ 4955  rmdir /srv/www/demos/node/
+ 4956  ls /srv/www/demos
+ 4957  mv /srv/www/demos/teams/scrumblr /srv/www/collab
+ 4958  la
+ 4959  ls demos
+ 4960  ls demos/teams
+ 4961  rmdir demos
+ 4962  ls demos/teams
+ 4963  la demos/teams
+ 4964  la demos
+ 4965  rmdir demos/teams
+ 4966  rmdir demos
+ 4967  la
+ 4968  mv static.tredius.nl static
+ 4969  la
+ 4970  htop
+ 4971  yareps carbon
+ 4972  cd mongodb
+ 4973  cd metrics
+ 4974  la
+ 4975  mkdir carbon
+ 4976  cd carbon
+ 4977  git clone git://github.com/indygreg/collectd-carbon.git
+ 4978  cd collectd-carbon
+ 4979  la
+ 4980  ls examples
+ 4981  cat examples/carbon.rewrite-rules.conf
+ 4982  vim examples/carbon.rewrite-rules.conf
+ 4983  sudo mkdir /opt/collectd
+ 4984  sudo mkdir /opt/collectd/plugins
+ 4985  //
+ 4986  popd
+ 4987  ..
+ 4988  mv collectd-carbon /opt/collectd/plugins
+ 4989  sudo mv collectd-carbon /opt/collectd/plugins
+ 4990  whereis collectd
+ 4991  cd /opt/collectd/plugins
+ 4992  la
+ 4993  cd collectd-carbon
+ 4994  la
+ 4995  ..
+ 4996  yareps dashgen
+ 4997  pip2 install graphite-dashgen
+ 4998  sudo mkdir /srv/hack.co.nl
+ 4999  sudo mkdir /srv/solobit
+ 5000  sudo mv /srv/solobit /srv/solobit.net
+ 5001  cd /srv
+ 5002  la
+ 5003  cd solobit.net
+ 5004  svn co http://svn.openwebanalytics.com/owa/WHAT/ ./owa
+ 5005  la
+ 5006  svn co http://svn.openwebanalytics.com/owa/WHAT
+ 5007  svn co http://svn.openwebanalytics.com/owa/trunk/ ./owa
+ 5008  sudo svn co http://svn.openwebanalytics.com/owa/trunk/ ./owa
+ 5009  l
+ 5010  ls owa
+ 5011  sudo chown -R susy:users .
+ 5012  sudo chown -R susy:users *
+ 5013  mv owa analytics
+ 5014  l
+ 5015  sudo vim /etc/nginx/nginx.conf
+ 5016  cat ~/__n2
+ 5017  ls -1 /srv/www/metrics
+ 5018  history |tail -n 100
+
