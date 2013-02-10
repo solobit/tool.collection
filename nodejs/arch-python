@@ -1,0 +1,4 @@
+# node.js fix for arch (use python2) 
+mkdir /tmp/bin
+ln -s /usr/bin/python2 /tmp/bin/python
+export PATH=/tmp/bin:$PATH
