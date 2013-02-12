@@ -1,0 +1,4 @@
+
+# fix io error
+sed -i -e '/gets is a security/d' ./stdio.in.h
+
